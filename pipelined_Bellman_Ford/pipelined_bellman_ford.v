@@ -43,7 +43,7 @@ mux_5_bit_2_input stg1_mux (.ip0(i0[9:5]), .ip1(predecessor_rd_addr), .select(st
 regFile register_output (.clk(clk), .rst(clear), .sourceaddr(source_address), .readaddr_i0(mux_out), .readaddr_i1(i1[9:5]), .readaddr_i2(i2[9:5]),
 						 .readaddr_i3(i3[9:5]), .readaddr_j0(j0_addr), .readaddr_j1(j1_addr), .readaddr_j2(j2_addr), .readaddr_j3(j3_addr), 						 
 						 .writeaddr_j0(stg4_pipeline_reg_out_A[11:7]), .writeaddr_j1(stg4_pipeline_reg_out_B[11:7]),  
-						 .writeaddr_j2(stg4_pipeline_reg_out_C[11:7]), .writeaddr_j3(stg4_pipeline_reg_out_C[11:7]),  
+						 .writeaddr_j2(stg4_pipeline_reg_out_C[11:7]), .writeaddr_j3(stg4_pipeline_reg_out_D[11:7]),  
 						 .w_i_pred0(w_i_pred0), .w_i1(w_i1), .w_i2(w_i2), .w_i3(w_i3),
 						 .w_j0(w_j0), .w_j1(w_j1), .w_j2(w_j2), .w_j3(w_j3) , 
 						 .w_j_pred0(w_j_pred0), .w_j_pred1(w_j_pred1), .w_j_pred2(w_j_pred2), .w_j_pred3(w_j_pred3), 
@@ -59,7 +59,7 @@ assign stg1_pipeline_register_input_D = {i3[13:10], i3[9:5], i3[4:0], w_i3};
 /// ************** stage_1_pipelined - register ***********************************
 
 
-register pipeline_stg1 ( .clk(clk), .in_data1(stg1_pipeline_register_input_A), .in_data2(stg1_pipeline_register_input_B), 
+register pipeline_stg1 ( .clk(clk), .clear(clear), .enable(enable), .in_data1(stg1_pipeline_register_input_A), .in_data2(stg1_pipeline_register_input_B), 
 						.in_data3(stg1_pipeline_register_input_C), .in_data4(stg1_pipeline_register_input_D), 
 						.out_data1(stage1_sort_input_A), .out_data2(stage1_sort_input_B), .out_data3(stage1_sort_input_C),.out_data4(stage1_sort_input_D));
 
@@ -73,7 +73,7 @@ sorting_block stage2 (stage1_sort_input_A, stage1_sort_input_B, stage1_sort_inpu
 
 // ************** stage_2_pipelined - register ***********************************
 
-register pipeline_stg2 ( .clk(clk), .in_data1(stg2_sorting_blk_out_A), .in_data2(stg2_sorting_blk_out_B), 
+register pipeline_stg2 ( .clk(clk), .clear(clear), .enable(enable), .in_data1(stg2_sorting_blk_out_A), .in_data2(stg2_sorting_blk_out_B), 
 						.in_data3(stg2_sorting_blk_out_C), .in_data4(stg2_sorting_blk_out_D), 
 						.out_data1(stg2_pipeline_reg_out_A), .out_data2(stg2_pipeline_reg_out_B), .out_data3(stg2_pipeline_reg_out_C),
 						.out_data4(stg2_pipeline_reg_out_D));
@@ -103,7 +103,7 @@ forwardblock frwd_mem_read_stg ( .inp_1(stg3_memread_fwd_blck_ip_A), .inp_2(stg3
 // ************** stage_3_pipelined - register ***********************************
 
 
-register pipeline_stg3 ( .clk(clk), .in_data1(stg3_fwd_block_op_A), .in_data2(stg3_fwd_block_op_B), 
+register pipeline_stg3 ( .clk(clk), .clear(clear), .enable(enable), .in_data1(stg3_fwd_block_op_A), .in_data2(stg3_fwd_block_op_B), 
 						.in_data3(stg3_fwd_block_op_C), .in_data4(stg3_fwd_block_op_D), 
 						.out_data1(stg4_fwd_blk_ip_A), .out_data2(stg4_fwd_blk_ip_B), .out_data3(stg4_fwd_blk_ip_C),
 						.out_data4(stg4_fwd_blk_ip_D));
@@ -126,7 +126,7 @@ computation_block stg4_compute (.mem_w0(stg4_comp_blk_ip_A), .mem_w1(stg4_comp_b
 // *************************************************** stage_4_pipelined - register **********************************************
 
 
-register pipeline_stg4 ( .clk(clk), .in_data1(stg4_comp_blk_op_A), .in_data2(stg4_comp_blk_op_B), 
+register pipeline_stg4 ( .clk(clk), .clear(clear), .enable(enable), .in_data1(stg4_comp_blk_op_A), .in_data2(stg4_comp_blk_op_B), 
 						.in_data3(stg4_comp_blk_op_C), .in_data4(stg4_comp_blk_op_D), 
 						.out_data1(stg4_pipeline_reg_out_A), .out_data2(stg4_pipeline_reg_out_B), .out_data3(stg4_pipeline_reg_out_C),
 						.out_data4(stg4_pipeline_reg_out_D));
