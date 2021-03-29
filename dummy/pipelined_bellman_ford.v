@@ -38,7 +38,7 @@ wire [11:0] w_j_pred0, w_j_pred1, w_j_pred2, w_j_pred3;
 
 stage1 stage1_read ( .clk(clk), .clear(clear) , .enable(enable), .output1(i0), .output2(i1), .output3(i2), .output4(i3));
 
-mux_5_bit_2_input(.ip0(i0[9:5]), .ip1(predecessor_rd_addr), .select(stg1_mux_control), .out(mux_out)); // fill ip1 and select from ns
+mux_5_bit_2_input stg1_mux (.ip0(i0[9:5]), .ip1(predecessor_rd_addr), .select(stg1_mux_control), .out(mux_out)); // fill ip1 and select from ns
 
 regFile register_output (.clk(clk), .rst(clear), .sourceaddr(source_address), .readaddr_i0(mux_out), .readaddr_i1(i1[9:5]), .readaddr_i2(i2[9:5]),
 						 .readaddr_i3(i3[9:5]), .readaddr_j0(j0_addr), .readaddr_j1(j1_addr), .readaddr_j2(j2_addr), .readaddr_j3(j3_addr), 						 
