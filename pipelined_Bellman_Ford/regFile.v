@@ -20,7 +20,7 @@ w_i_pred0, w_i1, w_i2, w_i3, w_j0, w_j1, w_j2, w_j3 , w_j_pred0, w_j_pred1, w_j_
 		if ( i == sourceaddr )
 			regMem[i] <= {`MEMORYWORD_BITSIZE{1'b0}}; // sourceaddr which is read from the user at the start stage of FSM and the corresponding memory word is set 0 as per bell man ford algorithm
 		else
-			regMem[i] <= {`MEMORYWORD_BITSIZE{1'b1}};
+			regMem[i] <= { 1'b1, {`MEMORYWORD_BITSIZE-1{1'b0}}};
 	end
     else begin
 		if (wr_en0) begin 

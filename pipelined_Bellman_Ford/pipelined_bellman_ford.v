@@ -1,9 +1,11 @@
-module pipelined_bellman_ford (clk, clear, enable, stg1_mux_control, source_address, predecessor_rd_addr, predecessor_out );
+module pipelined_bellman_ford (clk, clear, enable, stg1_mux_control, source_address, predecessor_rd_addr, predecessor_out);
 
 input clk, clear, enable, stg1_mux_control;
 input [4:0] source_address, predecessor_rd_addr;
 
 output [4:0] predecessor_out;
+// debug
+//output [17:0] compute_outa, compute_outb, compute_outc, compute_outd;
 
 wire [13:0] i0, i1,i2,i3;
 wire [4:0] mux_out;
@@ -141,6 +143,12 @@ assign w_j_pred3 = {stg4_pipeline_reg_out_D[6:0], stg4_pipeline_reg_out_D[16:12]
 //**************************************************************************************************
 
 assign predecessor_out = w_i_pred0[4:0];
+
+
+/*assign compute_outa = stg4_pipeline_reg_out_A;
+assign compute_outb = stg4_pipeline_reg_out_B;
+assign compute_outc = stg4_pipeline_reg_out_C;
+assign compute_outd = stg4_pipeline_reg_out_D;*/
 
 endmodule
 
