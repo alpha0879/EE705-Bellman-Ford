@@ -5,16 +5,18 @@
 
 module regFile_tb;
   reg clk, rst, wr_en0, wr_en1, wr_en2, wr_en3;
-  reg [`ADDRESS_LEN-1:0] readaddr_i0, readaddr_i1, readaddr_i2, readaddr_i3, readaddr_j0, readaddr_j1, readaddr_j2, readaddr_j3 , writeaddr_j0, writeaddr_j1, writeaddr_j2, writeaddr_j3;
+  reg [`ADDRESS_LEN-1:0] sourceaddr, readaddr_i0, readaddr_i1, readaddr_i2, readaddr_i3, readaddr_j0, readaddr_j1, readaddr_j2, readaddr_j3 , writeaddr_j0, writeaddr_j1, writeaddr_j2, writeaddr_j3;
   reg [`MEMORYWORD_BITSIZE-1:0] w_j_pred0, w_j_pred1, w_j_pred2, w_j_pred3;
-  wire [`NODE_WEIGHT_BITSIZE-1:0] w_i0, w_i1, w_i2, w_i3, w_j0, w_j1, w_j2, w_j3;
+  wire [`NODE_WEIGHT_BITSIZE-1:0] w_i1, w_i2, w_i3, w_j0, w_j1, w_j2, w_j3;
+  wire [`MEMORYWORD_BITSIZE-1:0] w_i_pred0;
 
-  regFile uut (clk, rst, readaddr_i0, readaddr_i1, readaddr_i2, readaddr_i3, readaddr_j0, readaddr_j1, readaddr_j2, readaddr_j3 , writeaddr_j0, writeaddr_j1, writeaddr_j2, writeaddr_j3, 
-w_i0, w_i1, w_i2, w_i3, w_j0, w_j1, w_j2, w_j3 , w_j_pred0, w_j_pred1, w_j_pred2, w_j_pred3, wr_en0, wr_en1, wr_en2, wr_en3);
+  regFile uut (clk, rst, sourceaddr, readaddr_i0, readaddr_i1, readaddr_i2, readaddr_i3, readaddr_j0, readaddr_j1, readaddr_j2, readaddr_j3 , writeaddr_j0, writeaddr_j1, writeaddr_j2, writeaddr_j3, 
+w_i_pred0, w_i1, w_i2, w_i3, w_j0, w_j1, w_j2, w_j3 , w_j_pred0, w_j_pred1, w_j_pred2, w_j_pred3, wr_en0, wr_en1, wr_en2, wr_en3);
 	
 	initial
 	begin   
-	   rst <= 1'b1; 
+	   rst <= 1'b1;
+	   sourceaddr <= 5'b00011;	   
 	   #12;
 	   
 	   rst <= 1'b0; 
