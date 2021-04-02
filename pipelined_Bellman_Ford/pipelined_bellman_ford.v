@@ -1,9 +1,13 @@
-module pipelined_bellman_ford (clk, clear, enable, stg1_mux_control, source_address, predecessor_rd_addr, predecessor_out);
+// provide enable and clear..
+// when done == 1 , disable the enable signal from the controller, 
+
+module pipelined_bellman_ford (clk, clear, enable, stg1_mux_control, source_address, predecessor_rd_addr, predecessor_out, done);
 
 input clk, clear, enable, stg1_mux_control;
 input [4:0] source_address, predecessor_rd_addr;
 
 output [4:0] predecessor_out;
+output done;
 // debug
 //output [17:0] compute_outa, compute_outb, compute_outc, compute_outd;
 
@@ -36,9 +40,14 @@ wire [17:0] stg4_pipeline_reg_out_A, stg4_pipeline_reg_out_B, stg4_pipeline_reg_
 
 wire [11:0] w_j_pred0, w_j_pred1, w_j_pred2, w_j_pred3;
 
+wire UP ;
+
+wire [4:0] pointer_address_to_mem;
+
 // ************************************ stage 1 ******************************************************************************
 
-stage1 stage1_read ( .clk(clk), .clear(clear) , .enable(enable), .output1(i0), .output2(i1), .output3(i2), .output4(i3));
+stage1 stage1_read ( .clk(clk), .clear(clear) , .enable(enable), .output1(i0), .output2(i1), .output3(i2), .output4(i3) , 
+										.pointer_address(pointer_address_to_mem));
 
 mux_5_bit_2_input stg1_mux (.ip0(i0[9:5]), .ip1(predecessor_rd_addr), .select(stg1_mux_control), .out(mux_out)); // fill ip1 and select from ns
 
@@ -149,6 +158,14 @@ assign predecessor_out = w_i_pred0[4:0];
 assign compute_outb = stg4_pipeline_reg_out_B;
 assign compute_outc = stg4_pipeline_reg_out_C;
 assign compute_outd = stg4_pipeline_reg_out_D;*/
+
+
+
+//****************************************** early_stop_logic ***************************************************************************
+
+assign UP = stg4_pipeline_reg_out_A[17] | stg4_pipeline_reg_out_B[17] | stg4_pipeline_reg_out_C[17] | stg4_pipeline_reg_out_D[17] ;
+
+early_stop early_stop_logic ( .UP( UP ), .clk( clk ), .clr( clear ), .addr( pointer_address_to_mem ), .done( done ) ); 
 
 endmodule
 
