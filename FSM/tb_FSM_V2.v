@@ -7,6 +7,7 @@ wire LEDR, LEDG;
 
 FSM_V2 FSM(clk, KEY, SW, LEDR, LEDG);
 
+
 always #1 clk = ~clk;
 
 initial begin
@@ -17,8 +18,8 @@ initial begin
 	#15;
 	KEY = 1'b0; #20; KEY = 1'b1;
 	#50;
-	SW[5] = 1'b1;
 	
+	SW[5] = 1'b1;	
 	@(LEDG)begin
 		if(LEDG == 1)
 			SW[4:0] = 5'd7;
@@ -26,10 +27,11 @@ initial begin
 	#20;
 	SW[5]=0;
 	@(LEDG) begin
-	 if(LEDG==0)
-		SW[5] = 1;
+	 if(LEDG==0)begin
+		#30;
+		SW[5] = 1;end
 	end
-	#30;
+	
 	@(LEDG) begin
 	if(LEDG == 1)
 		SW[4:0] = 5'd12;

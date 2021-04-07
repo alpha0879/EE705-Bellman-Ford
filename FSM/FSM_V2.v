@@ -12,35 +12,36 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 		DEST_INP = 3'd3,
 		DEST_READ = 3'd4,
 		RECURSION = 3'd5,
-		VGA_DISP = 3'd6;
+		SOURCE_READ = 3'd6,
+		VGA_DISP = 3'd7;
 	
 	reg[2:0] present_state, next_state;
 	
 	wire sys_clk,vga_clk, sys_reset, done_compute;
+	wire hsync, vsync;
 	wire [4:0] predecessor_out;
 	wire[1:0] new_dest_rest;
-	reg vga_disp, vga_read = 1'b0;
+	wire[2:0]red,green;
+	wire[1:0] blue;
+	reg vga_disp, vga_write, vga_clr = 1'b0;
 	reg global_clear, global_en, select_input_predecessor =1'b0;
 	reg [4:0] source_addr, dest_addr, predecessor_addr;
 	//reg clk_compute_stage = 1'b0;
-	
-	// only for debugging
-	wire [4:0] display_node;
-	wire complete;
 	
 	system_clock clk_gen(.inp_clk(CLOCK_50), .sys_clk(sys_clk), .vga_clk(vga_clk));
 	
 	assign sys_reset = KEY[0];
 	assign new_dest_rest = {SW[5],KEY[0]}; //{dest_inp_en, new_dest, reset}
 	
-	pipelined_bellman_ford compute_stg(.clk(CLOCK_50), .clear(global_clear), .enable(global_en), 
+	pipelined_bellman_ford compute_stg(.clk(sys_clk), .clear(global_clear), .enable(global_en), 
 															.stg1_mux_control(select_input_predecessor), .source_address(source_addr), 
 															.predecessor_rd_addr(predecessor_addr), .predecessor_out(predecessor_out), .done(done_compute));
 															
-	vga_module  vga_controller(.clk(vga_clk),.node_addr(predecessor_addr),.display(vga_disp), .display_node(display_node), .complete(complete));  //all are inputs to VGA_controller
-	
+	module_display vga_module(.index_5(predecessor_addr),.write_en(vga_write),.FSM_clk(sys_clk),.clk_25(vga_clk),.clr(vga_clr),.display_on(vga_disp),
+								.hsync(hsync),.vsync(vsync),.red(red),.green(green), .blue(blue)  ); 
+								
 //Synchronous state transition	
-	always@(posedge CLOCK_50) begin
+	always@(posedge sys_clk) begin
 			if(!sys_reset) 
 			present_state <= START;
 	 else 
@@ -55,6 +56,8 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 						LEDR[0] = 1'b1;
 						LEDG[0] = 1'b0;
 						vga_disp = 1'b0;
+						vga_write = 1'b0;
+						
 						source_addr = 5'b00000;
 						dest_addr = 5'b00000;
 						predecessor_addr = 5'b00000;
@@ -71,6 +74,8 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 							
 				    end
 			INIT:	begin
+						LEDR[0] = 1'b1;
+						LEDG[0] = 1'b0;
 						source_addr = SW[4:0];
 						predecessor_addr =SW[4:0];
 
@@ -82,9 +87,13 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 							
 					end
 			COMPUTE:	begin
+							LEDR[0] = 1'b1;
+							LEDG[0] = 1'b0;
+							
 							global_clear  = 1'b0;
 							global_en  = 1'b1;
 							select_input_predecessor = 1'b0;
+							vga_disp = 1'b0;
 							
 							if(done_compute) begin
 												next_state = DEST_INP;
@@ -98,7 +107,12 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 							LEDR[0] =1'b0;
 							LEDG[0] = 1'b1;	
 							global_en = 1'b0;
-
+							global_clear = 1'b0;
+							select_input_predecessor = 1'b0;
+						
+							vga_disp = 1'b0;
+							vga_write = 1'b1;
+							vga_clr = 1'b1;
 							
 							if(!SW[5])
 								next_state = DEST_READ;
@@ -106,29 +120,63 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 								next_state = DEST_INP;							
 						end
 			DEST_READ:	begin
-							predecessor_addr = dest_addr;
+							LEDR[0] =1'b0;
+							LEDG[0] = 1'b1;	
+							
+							global_en = 1'b0;
+							global_clear = 1'b0;
+							vga_write = 1'b1;
+							vga_clr = 1'b0;
+							vga_disp = 1'b0;
+							predecessor_addr = dest_addr;							
 							select_input_predecessor = 1'b1;
+							
 							next_state = RECURSION;								
 						end
 			RECURSION:	begin
+							LEDR[0] =1'b0;
+							LEDG[0] = 1'b1;	
+
 							global_clear  = 1'b0;
-							global_en = 1'b0;							
-							
+							global_en = 1'b0;	
+							vga_write = 1'b1;
+							vga_clr = 1'b0;						
+							vga_disp = 1'b0;
+							select_input_predecessor = 1'b1;
 							if(predecessor_out!=source_addr)
 								begin								
 								predecessor_addr = predecessor_out;
 								next_state = RECURSION;
-								end	
-							
+								end								
 							else
-								next_state = VGA_DISP;
+								next_state = SOURCE_READ;
 							
 							if(predecessor_addr == 5'd0)
-								next_state = VGA_DISP;
+								next_state = SOURCE_READ;
 						end
+			SOURCE_READ:	begin 
+								LEDR[0] =1'b0;
+							    LEDG[0] = 1'b1;	
+
+								vga_write = 1'b1;
+								vga_clr = 1'b0;
+								global_clear  = 1'b0;
+								global_en = 1'b0;
+								select_input_predecessor = 1'b0;
+								predecessor_addr = source_addr;
+								
+								next_state  = VGA_DISP;
+							end
 			VGA_DISP:	begin
+						    vga_write = 1'b0;
+							vga_clr = 1'b0;
 							LEDG[0] = 1'b0;
+							LEDR[0] =1'b0;
 							vga_disp = 1'b1;
+							global_clear  = 1'b0;
+							global_en = 1'b0;							
+							select_input_predecessor = 1'b0;
+							
 							if(new_dest_rest == (2'b00||2'b10))
 								next_state = START;
 							else if(new_dest_rest == 2'b11)
@@ -139,6 +187,10 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 			default:	begin
 							LEDR[0] = 1'b0;
 							LEDG[0] = 1'b0;
+							global_clear  = 1'b0;
+							global_en = 1'b0;							
+							select_input_predecessor = 1'b0;
+							
 							next_state = START;	
 						end
 		endcase
@@ -752,18 +804,178 @@ early_stop early_stop_logic ( .UP( UP ), .clk( clk ), .clr( clear ), .addr( poin
 
 endmodule
 
-//..........................vga_module.......................................................................
-module vga_module (clk, node_addr, display, display_node, complete);
-	input clk;
-	input [4:0]node_addr;
-	input display;
-	output [4:0] display_node;
-	output complete;
+//*********************************************  VGA Module ******************************************
+module module_display(index_5,write_en,FSM_clk,clk_25,clr,display_on,hsync,vsync,red,green,blue);
+input [4:0] index_5;
+input wire write_en,FSM_clk,clr,display_on,clk_25;
+output hsync,vsync;
+output reg [2:0]  red,green;
+output reg [1:0] blue;
+wire [4:0]index_bar;
+wire update_signal,clr_vga;
+wire [15:0] k;
+reg [0:0] graph[0:19199];
+
+initial
+begin
+$readmemb("graph_1D.mif",graph);
+end
+assign clr_vga=1'b0;
+
+display_unit D1(index_5,write_en,FSM_clk,clr,display_on,index_bar,update_signal);
+vga_controller V1 (clk_25,clr_vga,hsync,vsync,k);
+encoder E1(k,index_bar);
+always@(posedge clk_25)
+begin
 	
 	
-	assign display_node = node_addr;
 	
-	assign complete = display;
+	red<={3{graph[k]|update_signal}};
+	green<={3{graph[k]|update_signal}};
+	blue<={2{graph[k]|update_signal}};
 	
+end
 endmodule
- 
+
+
+module display_unit(index_5,write_en,FSM_clk,clr,display_on,index_bar,update_signal);
+input [4:0] index_5;//5 bit value corresponding to nodes from FSM(writing address)
+input write_en,FSM_clk,clr,display_on;//Most of them are from FSM
+input [4:0] index_bar;//reading address from encoder block
+output wire update_signal;
+integer i;
+reg [0:31] up=32'h00000000;
+wire temp0,temp1;
+
+assign temp0=up[index_bar];
+assign update_signal=temp0 & display_on;
+
+//part 1
+always@(posedge FSM_clk)
+begin
+	if(clr)
+		begin
+		for(i=0;i<32;i=i+1)
+			begin
+			up[i]<=1'b0;
+			end
+		end
+	else if(write_en)
+		begin
+		up[index_5]<=1'b1;
+		end
+end
+endmodule
+//module 2
+//This is a combinational block that converts  16 bits  index value to corresponding  5 bits index for nodes ; for remaining points(16 bits), the corresponding 5 bit value will be zero
+module encoder(input_16,output_5);
+input [15:0]input_16;
+output wire[4:0] output_5;
+reg [4:0] index_bar;
+assign output_5=index_bar;
+always@(input_16)
+begin
+	case(input_16)//x+y*160 of the node   and it will give us the index corresponding to the particular nodes
+		16'b0000110011001011: index_bar=5'b00001;
+		16'b0000010000101000: index_bar=5'b00010;
+		16'b0000010111001010: index_bar=5'b00011;
+		16'b0001010110101111: index_bar=5'b00100;
+		16'b0001100010011110: index_bar=5'b00101;
+		16'b0000110010010001: index_bar=5'b00110;
+		16'b0001101001011001: index_bar=5'b00111;
+		16'b0010011001101110: index_bar=5'b01000;
+		16'b0010011111010000: index_bar=5'b01001;
+		16'b0011001110100000: index_bar=5'b01010;
+		16'b0010111011000010: index_bar=5'b01011;
+		16'b0011110100100111: index_bar=5'b01100;
+		16'b0100011110110101: index_bar=5'b01101;
+		16'b0100000010111010: index_bar=5'b01110;
+		16'b0100100000101011: index_bar=5'b01111;
+		16'b0011100110111100: index_bar=5'b10000;
+		16'b0100011011010000: index_bar=5'b10001;
+		16'b0100011000000101: index_bar=5'b10010;
+		16'b0011011100011111: index_bar=5'b10011;
+		16'b0011001010100011: index_bar=5'b10100;
+		16'b0010000100100100: index_bar=5'b10101;
+		16'b0010101010011101: index_bar=5'b10110;
+		16'b0010011110010010: index_bar=5'b10111;
+		default : 				 index_bar=5'b00000;
+	endcase
+
+end
+endmodule
+
+
+//module 4--vga controller
+//clk-->25MHz 
+module vga_controller (clk,clr,hsync,vsync,k);
+input wire  clk,clr;
+output wire hsync,vsync;
+parameter [9:0] h_pixels=10'b1100100000;//800
+parameter [9:0] v_lines=10'b1000001001;//521
+parameter [9:0] hbp=10'b0010010000;//144
+parameter [9:0] hfp=10'b1100010000;//784
+parameter [9:0] vbp=10'b0000011111;//31
+parameter [9:0] vfp=10'b0111111111;//511
+reg vsenable=1'b0;
+reg  [9:0]  hcs=10'b0000000000;
+reg  [9:0]  vcs=10'b0000000000;
+wire vid_on;
+output reg [15:0] k=16'h0000;
+assign hsync=(hcs<128)?1'b0:1'b1;
+assign vsync=(vcs<2)?1'b0:1'b1;
+assign vid_on=((hcs>=hbp-1 && hcs<hfp-1)&& (vcs>=vbp &&vcs<vfp-1))?1'b1:1'b0;//-1 specifically for this
+
+always@(posedge clk)
+begin
+	if(hcs==10'b0000000000 && vcs==10'b0000000000)
+				k<=16'h0000;
+	
+			
+	else if(hcs[1:0]==2'b00 && vcs[1:0]==2'b11 && vid_on==1'b1)
+				k<=k+16'h0001;
+		
+	
+end
+
+always@(posedge clk or posedge clr)
+begin
+	if(clr)
+	
+	begin
+	hcs<=10'b0000000000;
+	vsenable<=0;
+	end
+	
+	else if (hcs==h_pixels-2)
+	begin
+	hcs<=hcs+10'b0000000001;
+	vsenable<=1;
+	end
+	
+	else if (hcs==h_pixels-1)
+	begin
+	hcs<=10'b0000000000;
+	vsenable<=0;
+	end
+	
+	else 
+	begin
+	hcs<=hcs+10'b0000000001;
+	vsenable<=0;
+	end
+	end
+
+always@(posedge clk or posedge clr)
+begin
+	if(clr)
+	vcs<=10'b0000000000;
+	else if (vsenable==1)
+	begin
+		if (vcs==v_lines-1) 
+			vcs<=10'b0000000000;
+		else
+			vcs<=vcs+10'b0000000001;
+		end
+end
+endmodule
