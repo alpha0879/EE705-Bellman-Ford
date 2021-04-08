@@ -12,8 +12,7 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 		DEST_INP = 3'd3,
 		DEST_READ = 3'd4,
 		RECURSION = 3'd5,
-		SOURCE_READ = 3'd6,
-		VGA_DISP = 3'd7;
+		VGA_DISP = 3'd6;
 	
 	reg[2:0] present_state, next_state;
 	
@@ -23,13 +22,14 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 	wire[1:0] new_dest_rest;
 	wire[2:0]red,green;
 	wire[1:0] blue;
+	wire[5:0] button_input;
 	reg vga_disp, vga_write, vga_clr = 1'b0;
 	reg global_clear, global_en, select_input_predecessor =1'b0;
 	reg [4:0] source_addr, dest_addr, predecessor_addr;
-	//reg clk_compute_stage = 1'b0;
 	
 	system_clock clk_gen(.inp_clk(CLOCK_50), .sys_clk(sys_clk), .vga_clk(vga_clk));
-	
+
+	assign button_input = SW[5:0];
 	assign sys_reset = KEY[0];
 	assign new_dest_rest = {SW[5],KEY[0]}; //{dest_inp_en, new_dest, reset}
 	
@@ -57,6 +57,7 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 						LEDG[0] = 1'b0;
 						vga_disp = 1'b0;
 						vga_write = 1'b0;
+						vga_clr = 1'b0;
 						
 						source_addr = 5'b00000;
 						dest_addr = 5'b00000;
@@ -67,7 +68,7 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 						select_input_predecessor = 1'b0;
 
 						
-						if(SW[5])
+						if(button_input[5])
 							next_state = INIT;
 						else 
 							next_state = START;
@@ -76,9 +77,14 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 			INIT:	begin
 						LEDR[0] = 1'b1;
 						LEDG[0] = 1'b0;
+						vga_disp = 1'b0;
+						vga_write = 1'b0;
+						vga_clr = 1'b0;
+						
 						source_addr = SW[4:0];
-						predecessor_addr =SW[4:0];
-
+						predecessor_addr = 5'b00000;
+						dest_addr = 5'b00000;
+						
 						global_clear  = 1'b1;
 						global_en  = 1'b0;
 						select_input_predecessor = 1'b0;
@@ -89,11 +95,17 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 			COMPUTE:	begin
 							LEDR[0] = 1'b1;
 							LEDG[0] = 1'b0;
+							vga_write = 1'b0;
+							vga_disp = 1'b0;
+							vga_clr = 1'b0;
+							
+							dest_addr = 5'b00000;
+							predecessor_addr = 5'b00000;
 							
 							global_clear  = 1'b0;
 							global_en  = 1'b1;
 							select_input_predecessor = 1'b0;
-							vga_disp = 1'b0;
+							
 							
 							if(done_compute) begin
 												next_state = DEST_INP;
@@ -109,12 +121,14 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 							global_en = 1'b0;
 							global_clear = 1'b0;
 							select_input_predecessor = 1'b0;
-						
+							
+							predecessor_addr = 5'b00000;
+							
 							vga_disp = 1'b0;
 							vga_write = 1'b1;
 							vga_clr = 1'b1;
 							
-							if(!SW[5])
+							if(!button_input[5])
 								next_state = DEST_READ;
 							else
 								next_state = DEST_INP;							
@@ -122,6 +136,7 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 			DEST_READ:	begin
 							LEDR[0] =1'b0;
 							LEDG[0] = 1'b1;	
+							dest_addr = SW[4:0];
 							
 							global_en = 1'b0;
 							global_clear = 1'b0;
@@ -136,7 +151,8 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 			RECURSION:	begin
 							LEDR[0] =1'b0;
 							LEDG[0] = 1'b1;	
-
+							dest_addr = SW[4:0];
+							
 							global_clear  = 1'b0;
 							global_en = 1'b0;	
 							vga_write = 1'b1;
@@ -148,31 +164,28 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 								predecessor_addr = predecessor_out;
 								next_state = RECURSION;
 								end								
-							else
-								next_state = SOURCE_READ;
-							
-							if(predecessor_addr == 5'd0)
-								next_state = SOURCE_READ;
-						end
-			SOURCE_READ:	begin 
-								LEDR[0] =1'b0;
-							    LEDG[0] = 1'b1;	
-
-								vga_write = 1'b1;
-								vga_clr = 1'b0;
-								global_clear  = 1'b0;
-								global_en = 1'b0;
-								select_input_predecessor = 1'b0;
+							else 
+								begin
 								predecessor_addr = source_addr;
-								
-								next_state  = VGA_DISP;
-							end
+								next_state = VGA_DISP; 
+								end
+							
+							if(predecessor_addr == 5'd0) 
+								begin
+								predecessor_addr = source_addr;
+								next_state = VGA_DISP;
+								end
+						end
 			VGA_DISP:	begin
 						    vga_write = 1'b0;
 							vga_clr = 1'b0;
 							LEDG[0] = 1'b0;
 							LEDR[0] =1'b0;
 							vga_disp = 1'b1;
+							
+							dest_addr = SW[4:0];
+							predecessor_addr = 5'b00000;
+							
 							global_clear  = 1'b0;
 							global_en = 1'b0;							
 							select_input_predecessor = 1'b0;
@@ -185,11 +198,6 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 								next_state = VGA_DISP;
 						end
 			default:	begin
-							LEDR[0] = 1'b0;
-							LEDG[0] = 1'b0;
-							global_clear  = 1'b0;
-							global_en = 1'b0;							
-							select_input_predecessor = 1'b0;
 							
 							next_state = START;	
 						end
@@ -387,7 +395,6 @@ compute comp3 (mem_w3,out3);
 
 endmodule
 
-
 module compute(A_in,A_out);
 //For A_in
 //6:0--->W[j]
@@ -431,26 +438,7 @@ begin
 	A_out[16:12]=A_in[23:19];
 	end
 endmodule
-//Test bench of compute
-`timescale 1 ns/1 ps
-module tb_compute;
-reg [28:0] TA_in;
-wire [17:0] TA_out;
-compute com(TA_in,TA_out);
-initial 
-begin
-#20;
-TA_in<=29'b10010110110010000110111001111;//result should be 111011001000011101
-#20;
-TA_in<=29'b00010110110010000110111001111;//result should be 011011001001001111
-#20;
-TA_in<=29'b10010110110010000110110001111;//result should be 011011001000001111
-#20;
-TA_in<=29'b00010110110010000110110001111;//result should be 011011001000001111
-#20;
 
-end
-endmodule
 //...............................data_forward.......................................
 
 module forwardblock(inp_1,inp_2,inp_3,inp_4,inpf_1,inpf_2,inpf_3,inpf_4, out_1,out_2,out_3,out_4);
@@ -534,7 +522,7 @@ bitonic_sort C4(temp[1],temp[3],temp[6],temp[7]);
 bitonic_sort C5(temp[4],temp[6],A_new,B_new);
 bitonic_sort C6(temp[5],temp[7],C_new,D_new);
 endmodule
-
+//********************************* Bitonic sort ************************************************
 module bitonic_sort(A,B,LT,GT);
 //For A,B,LT,GT
 //6:0-->W[i]
