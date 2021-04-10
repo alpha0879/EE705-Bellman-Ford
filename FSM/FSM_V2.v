@@ -16,7 +16,7 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 	
 	reg[2:0] present_state, next_state;
 	
-	wire sys_clk,vga_clk, sys_reset, done_compute;
+	wire vga_clk, sys_reset, done_compute;//sys_clk;
 	wire hsync, vsync;
 	wire [4:0] predecessor_out;
 	wire[1:0] new_dest_rest;
@@ -27,21 +27,26 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 	reg global_clear, global_en, select_input_predecessor =1'b0;
 	reg [4:0] source_addr, dest_addr, predecessor_addr;
 	
-	system_clock clk_gen(.inp_clk(CLOCK_50), .sys_clk(sys_clk), .vga_clk(vga_clk));
+	//system_clock clk_gen(.inp_clk(CLOCK_50), .sys_clk(sys_clk), .vga_clk(vga_clk));
+	
+	pll	pll_inst (
+	.inclk0 ( CLOCK_50 ),
+	.c0 ( vga_clk )
+	);
 
 	assign button_input = SW[5:0];
 	assign sys_reset = KEY[0];
 	assign new_dest_rest = {SW[5],KEY[0]}; //{dest_inp_en, new_dest, reset}
 	
-	pipelined_bellman_ford compute_stg(.clk(sys_clk), .clear(global_clear), .enable(global_en), 
+	pipelined_bellman_ford compute_stg(.clk(CLOCK_50), .clear(global_clear), .enable(global_en), 
 															.stg1_mux_control(select_input_predecessor), .source_address(source_addr), 
 															.predecessor_rd_addr(predecessor_addr), .predecessor_out(predecessor_out), .done(done_compute));
 															
-	module_display vga_module(.index_5(predecessor_addr),.write_en(vga_write),.FSM_clk(sys_clk),.clk_25(vga_clk),.clr(vga_clr),.display_on(vga_disp),
+	module_display vga_module(.index_5(predecessor_addr),.write_en(vga_write),.FSM_clk(CLOCK_50),.clk_25(vga_clk),.clr(vga_clr),.display_on(vga_disp),
 								.hsync(hsync),.vsync(vsync),.red(red),.green(green), .blue(blue)  ); 
 								
 //Synchronous state transition	
-	always@(posedge sys_clk) begin
+	always@(posedge CLOCK_50) begin
 			if(!sys_reset) 
 			present_state <= START;
 	 else 
@@ -206,19 +211,21 @@ module FSM_V2(CLOCK_50, KEY, SW, LEDR, LEDG);
 
 endmodule
 //...............................................clock_gen............................................
-module system_clock(inp_clk, sys_clk,vga_clk);
-	input inp_clk;
-	output sys_clk,vga_clk;
-	
-	reg[3:0] clock_counter= 4'd0;
-	assign sys_clk = clock_counter[3];
-	assign vga_clk = clock_counter[0];
-	
-    always@(posedge inp_clk) begin
-	  clock_counter = clock_counter+1;
-	end
+//module system_clock(inp_clk, sys_clk,vga_clk);
+//	input inp_clk;
+//	output sys_clk,vga_clk;
+//	
+//	reg[3:0] clock_counter= 4'd0;
+//	assign sys_clk = clock_counter[3];
+//	assign vga_clk = clock_counter[0];
+//	
+//    always@(posedge inp_clk) begin
+//	  clock_counter = clock_counter+1;
+//	end
+//
+//endmodule
 
-endmodule
+
 //----------------------------------------------stage_1---------------------------------------
 module stage1 ( clk, clear , enable, output1, output2, output3, output4, pointer_address ); 
 

@@ -5,11 +5,12 @@ reg clk, KEY;
 reg [5:0] SW;
 wire LEDR, LEDG;
 
-FSM_V2 FSM(clk, KEY, SW, LEDR, LEDG);
+FSM_V2 FSM_dut(clk, KEY, SW, LEDR, LEDG);
 
 
-always #1 clk = ~clk;
-
+always #10 clk = ~clk;
+initial
+#2000 $finish;
 initial begin
 	clk = 0;
 	
@@ -28,7 +29,6 @@ initial begin
 	SW[5]=0;
 	@(LEDG) begin
 	 if(LEDG==0)begin
-		#30;
 		SW[5] = 1;end
 	end
 	
@@ -65,6 +65,8 @@ initial begin
 		KEY = 1'b0;
 		end
 	end
+	
+	
 end
 
 endmodule
