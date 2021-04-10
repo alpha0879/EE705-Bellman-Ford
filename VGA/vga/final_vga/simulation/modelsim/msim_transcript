@@ -1,0 +1,46 @@
+# do module_display_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/arjun/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga {/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:09:23 on Apr 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga" /home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v 
+# -- Compiling module module_display
+# -- Compiling module display_unit
+# -- Compiling module encoder
+# -- Compiling module clk_divider
+# -- Compiling module vga_controller
+# -- Compiling module TestBench
+# 
+# Top level modules:
+# 	TestBench
+# End time: 23:09:23 on Apr 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.TestBench
+# vsim work.TestBench 
+# Start time: 23:09:29 on Apr 06,2021
+# Loading work.TestBench
+# Loading work.module_display
+# Loading work.display_unit
+# Loading work.clk_divider
+# Loading work.vga_controller
+# Loading work.encoder
+add wave -r /*
+run
+# WARNING: No extended dataflow license exists
+restart
+run
+add wave -r /*
+# End time: 00:57:53 on Apr 07,2021, Elapsed time: 1:48:24
+# Errors: 0, Warnings: 0

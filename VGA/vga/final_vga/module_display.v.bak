@@ -1,0 +1,78 @@
+module display_graph(index,display,hc,vc,video_on,red,green,blue);
+input wire [4:0] index;//aswathi's FSM will give this signal
+input wire display;//aswathi's FSM will give this signal
+input wire[9:0] hc,vc;//these are the count values coming from  vga_controller
+input wire video_on;//indicates when we are in active region of the vga or not
+output reg [2:0] red,green;
+output reg [1:0] blue;//these are the o/p's given to the DAC. 
+reg [8:0] x_cordinates [0:31];
+reg [8:0] y_cordinates [0:31];
+reg [0:249] graph_channel1 [0:249];
+reg [0:249] graph_channel2 [0:249]=0;
+//This initial is used to initialize the x cordinates
+//index----->ROM_(x_cordinates)------->x_cordinates 
+initial 
+begin
+ $readmemb("index2x.mif",x_cordinates);
+end
+
+//This initial is used to initialize the y cordinates
+//index----->ROM_(y_cordinates)------->y_cordinates 
+initial 
+begin
+ $readmemb("index2y.mif",y_cordinates);
+end
+
+//Now, lets store the image of the graph ,in graph_channel1
+initial 
+begin
+ $readmemb("graph_final.mif",graph_channel1);
+end
+
+
+always@(index)
+begin
+if y_cordinates[index]>1 && x_cordinates[index]>1
+begin
+graph_channel2[y_cordinates[index]][x_cordinates[index]]=1;
+graph_channel2[y_cordinates[index]+1][x_cordinates[index]]=1;
+graph_channel2[y_cordinates[index]][x_cordinates[index]+1]=1;
+graph_channel2[y_cordinates[index]+1][x_cordinates[index]+1]=1;
+graph_channel2[y_cordinates[index]-1][x_cordinates[index]]=1;
+graph_channel2[y_cordinates[index]][x_cordinates[index]-1]=1;
+graph_channel2[y_cordinates[index]-1][x_cordinates[index]-1]=1;
+end
+else
+graph_channel2[y_cordinates[index]][x_cordinates[index]]=1;
+end
+
+always@(vc,hc,video_on,display)
+begin
+if (video_on)
+begin
+if (!display )
+begin
+red={3{graph_channel1[vc][hc]}};
+green={3{graph_channel1[vc][hc]}};
+blue={2{graph_channel1[vc][hc]}};
+end
+else
+
+begin
+if graph_channel2[vc][hc]==0:
+begin
+red={3{graph_channel1[vc][hc]}};
+green={3{graph_channel1[vc][hc]}};
+blue={2{graph_channel1[vc][hc]}};
+end
+else
+begin
+red={3{graph_channel2[vc][hc]}};
+green={3{1'b0}};
+blue={2{1'b0}};
+end
+end
+end
+end
+
+endmodule

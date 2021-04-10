@@ -1,0 +1,156 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/simulation/modelsim
+vclk_divider
+Z1 !s110 1617730763
+!i10b 1
+!s100 =R]5GEbD[zSjAZ_S=nR^:0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?mZcj3W[7LcFbB9`:jP<h0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1617730630
+Z5 8/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v
+Z6 F/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v
+!i122 0
+L0 104 11
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1617730763.000000
+!s107 /home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga|/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+/home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga
+Z12 tCvgOpt 0
+vdisplay_unit
+R1
+!i10b 1
+!s100 loBHgTj0M2oWEHW>]^;i<1
+R2
+I^BkCk2<F:EO80]<9_UhWH3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 36 28
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 /home/arjun/Desktop/DESIGN_LAB_PROJECT/final_vga/module_display.v|
+R9
+!i113 1
+R10
+R11
+R12
+vencoder
+R1
+!i10b 1
+!s100 K;WQo;MPA<B[f:6kDd``C2
+R2
+I;K63><eLaE^1CVkhE59MB3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 66 36
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 1
+R10
+R11
+R12
+vmodule_display
+R1
+!i10b 1
+!s100 h]U=oHTDz=JSTA1=?[T^e0
+R2
+IS1KDA2cf@OXD?3`H2ToON0
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 2 32
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 1
+R10
+R11
+R12
+vTestBench
+R1
+!i10b 1
+!s100 XOTmkbh@E5]eaC2_OleGU0
+R2
+IF;XmRTGgEnWR9F1ef<37_3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 192 48
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 1
+R10
+R11
+R12
+n@test@bench
+vvga_controller
+R1
+!i10b 1
+!s100 Xcm`kZzz?QWKRW5i98K?Z2
+R2
+Ig08P]6j8GHY6>[<lMO^L`3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 118 71
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 1
+R10
+R11
+R12
