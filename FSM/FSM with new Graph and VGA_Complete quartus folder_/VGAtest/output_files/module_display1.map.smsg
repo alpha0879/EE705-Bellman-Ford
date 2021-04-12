@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at module_display1.v(350): always construct contains both blocking and non-blocking assignments File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/TESTING_NEW VGA/VGAtest/module_display1.v Line: 350

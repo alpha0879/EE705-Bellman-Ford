@@ -1,0 +1,10 @@
+
+State Machine - |FSM|present_state
+Name present_state.VGA_DISP present_state.RECURSION present_state.DEST_READ present_state.DEST_INP present_state.COMPUTE present_state.INIT present_state.START 
+present_state.START 0 0 0 0 0 0 0 
+present_state.INIT 0 0 0 0 0 1 1 
+present_state.COMPUTE 0 0 0 0 1 0 1 
+present_state.DEST_INP 0 0 0 1 0 0 1 
+present_state.DEST_READ 0 0 1 0 0 0 1 
+present_state.RECURSION 0 1 0 0 0 0 1 
+present_state.VGA_DISP 1 0 0 0 0 0 1 

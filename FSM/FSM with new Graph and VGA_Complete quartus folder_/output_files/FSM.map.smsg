@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at module_display1.v(340): always construct contains both blocking and non-blocking assignments File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/TESTING_NEW VGA/module_display1.v Line: 340
+Info (10281): Verilog HDL Declaration information at FSM.v(15): object "VGA_DISP" differs only in case from object "vga_disp" in the same scope File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/TESTING_NEW VGA/FSM.v Line: 15

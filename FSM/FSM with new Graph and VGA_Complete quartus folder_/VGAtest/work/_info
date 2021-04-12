@@ -1,0 +1,125 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/TESTING_NEW VGA/VGAtest
+vdisplay_unit
+!i10b 1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!s100 ^cZ=7<LhbQkEj3bV7:P1h3
+IKERLc:NdEb;5O_I3U3G_^0
+R0
+Z2 w1618247745
+Z3 8module_display.v
+Z4 Fmodule_display.v
+L0 52
+Z5 OV;L;10.5b;63
+Z6 !s108 1618248115.000000
+Z7 !s107 module_display.v|
+Z8 !s90 -reportprogress|300|module_display.v|
+!i113 1
+Z9 tCvgOpt 0
+vencoder
+!i10b 1
+R1
+r1
+!s85 0
+31
+!s100 S<l?GBY6Y^i9_N]jiD1dL1
+IkoU4A1BDC43OkY?cJ9F0E1
+R0
+R2
+R3
+R4
+L0 90
+R5
+R6
+R7
+R8
+!i113 1
+R9
+vmodule_display
+!i10b 1
+R1
+r1
+!s85 0
+31
+!s100 VKUmzFZ^5k[8QSF79:oBn1
+IeU6OnV0<=In_Jhj>Y3F?i1
+R0
+R2
+R3
+R4
+L0 3
+R5
+R6
+R7
+R8
+!i113 1
+R9
+vmodule_display1
+!i10b 1
+R1
+r1
+!s85 0
+31
+!s100 X3BHn=k:aoI=JMeCVo_aL1
+InL5F1O5ih2inF6I0zT48R0
+R0
+R2
+R3
+R4
+L0 16
+R5
+R6
+R7
+R8
+!i113 1
+R9
+vTestBench
+!i10b 1
+R1
+r1
+!s85 0
+31
+!s100 1adh:=gLB6QCl_<==?_V33
+IIF2GN<@BOn]mLZ<LJkPhW3
+R0
+w1618248274
+8TestBench.v
+FTestBench.v
+L0 3
+R5
+!s108 1618248281.000000
+!s107 TestBench.v|
+!s90 -reportprogress|300|TestBench.v|
+!i113 1
+R9
+n@test@bench
+vvga_controller
+!i10b 1
+R1
+r1
+!s85 0
+31
+!s100 ]HaNH@=GK0Rl?gD3hd`E]0
+IgJ:^PfP2]g`m;7k5HKCHS2
+R0
+R2
+R3
+R4
+L0 330
+R5
+R6
+R7
+R8
+!i113 1
+R9
