@@ -1,15 +1,15 @@
 module FSM(CLOCK_50, KEY, SW, LEDR, LEDG, hsync, vsync, red , green, blue);
 	input CLOCK_50;
-    input KEY;
-	input [10:0]SW;
-	output LEDR;
-	output LEDG;
+    input KEY;		 // Reset button
+	input [10:0]SW;  // SW[10:6] = Destination address, SW[4:0] = Source address, SW[5] = State change switch
+	output LEDR;	 // Glows when SW[5] is on when FSM starts upon resetting, and remains on in state INIT and COMPUTE and turns off when moved to DEST_INP state
+	output LEDG;	 // LEDG turns on to input destination address, and turns off at the time when VGA displays updated graph
 	output hsync, vsync;
 	output [2:0]red,green;
 	output [1:0] blue;
     
 	localparam 
-		START = 3'd0,
+		START = 3'd0,  
 		INIT = 3'd1,
 		COMPUTE = 3'd2,
 		DEST_INP = 3'd3,
