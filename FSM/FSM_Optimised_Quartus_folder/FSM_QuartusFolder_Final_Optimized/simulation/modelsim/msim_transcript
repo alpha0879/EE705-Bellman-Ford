@@ -1,0 +1,265 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do FSM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:18 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 22:02:18 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:19 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v 
+# -- Compiling module stage1
+# 
+# Top level modules:
+# 	stage1
+# End time: 22:02:19 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:19 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v 
+# -- Compiling module sorting_block
+# -- Compiling module bitonic_sort
+# 
+# Top level modules:
+# 	sorting_block
+# End time: 22:02:19 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:19 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 22:02:19 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:19 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v 
+# -- Compiling module regFile
+# 
+# Top level modules:
+# 	regFile
+# End time: 22:02:20 on Apr 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:20 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 22:02:20 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:20 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v 
+# -- Compiling module pipelined_bellman_ford
+# 
+# Top level modules:
+# 	pipelined_bellman_ford
+# End time: 22:02:20 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:20 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v 
+# -- Compiling module mux_5_bit_2_input
+# 
+# Top level modules:
+# 	mux_5_bit_2_input
+# End time: 22:02:20 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:20 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v 
+# -- Compiling module forwardblock
+# 
+# Top level modules:
+# 	forwardblock
+# End time: 22:02:20 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:21 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v 
+# -- Compiling module early_stop
+# 
+# Top level modules:
+# 	early_stop
+# End time: 22:02:21 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:21 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v 
+# -- Compiling module computation_block
+# -- Compiling module compute
+# -- Compiling module tb_compute
+# 
+# Top level modules:
+# 	computation_block
+# 	tb_compute
+# End time: 22:02:21 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:21 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v 
+# -- Compiling module FSM
+# 
+# Top level modules:
+# 	FSM
+# End time: 22:02:21 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing/db {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:21 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 22:02:21 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:22 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v 
+# -- Compiling module rom_lut
+# 
+# Top level modules:
+# 	rom_lut
+# End time: 22:02:22 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:22 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v 
+# -- Compiling module module_display1
+# -- Compiling module display_unit
+# -- Compiling module encoder
+# -- Compiling module vga_controller
+# 
+# Top level modules:
+# 	module_display1
+# End time: 22:02:22 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI\ Design\ lab/Project/FSM/FSM_Timing {G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:22 on Apr 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing" G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v 
+# -- Compiling module tb_FSM
+# 
+# Top level modules:
+# 	tb_FSM
+# End time: 22:02:22 on Apr 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_FSM
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_FSM 
+# Start time: 22:02:22 on Apr 18,2021
+# Loading work.tb_FSM
+# Loading work.FSM
+# Loading work.pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.pipelined_bellman_ford
+# Loading work.stage1
+# Loading work.program_counter
+# Loading work.rom_lut
+# Loading work.mux_5_bit_2_input
+# Loading work.regFile
+# Loading work.register
+# Loading work.sorting_block
+# Loading work.bitonic_sort
+# Loading work.forwardblock
+# Loading work.computation_block
+# Loading work.compute
+# Loading work.early_stop
+# Loading work.module_display1
+# Loading work.display_unit
+# Loading work.vga_controller
+# Loading work.encoder
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: tb_FSM.FSM_dut.pll_inst.altpll_component.cycloneiii_pll.pll3
+# ** Note: $finish    : G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v(16)
+#    Time: 6 us  Iteration: 0  Instance: /tb_FSM
+# 1
+# Break in Module tb_FSM at G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v line 16
+restart
+add wave -position insertpoint  \
+sim:/tb_FSM/FSM_dut/START \
+sim:/tb_FSM/FSM_dut/INIT \
+sim:/tb_FSM/FSM_dut/COMPUTE \
+sim:/tb_FSM/FSM_dut/DEST_INP \
+sim:/tb_FSM/FSM_dut/DEST_READ \
+sim:/tb_FSM/FSM_dut/RECURSION \
+sim:/tb_FSM/FSM_dut/VGA_DISP \
+sim:/tb_FSM/FSM_dut/CLOCK_50 \
+sim:/tb_FSM/FSM_dut/KEY \
+sim:/tb_FSM/FSM_dut/SW \
+sim:/tb_FSM/FSM_dut/LEDR \
+sim:/tb_FSM/FSM_dut/LEDG \
+sim:/tb_FSM/FSM_dut/hsync \
+sim:/tb_FSM/FSM_dut/vsync \
+sim:/tb_FSM/FSM_dut/red \
+sim:/tb_FSM/FSM_dut/green \
+sim:/tb_FSM/FSM_dut/blue \
+sim:/tb_FSM/FSM_dut/present_state \
+sim:/tb_FSM/FSM_dut/next_state \
+sim:/tb_FSM/FSM_dut/vga_clk \
+sim:/tb_FSM/FSM_dut/sys_reset \
+sim:/tb_FSM/FSM_dut/done_compute \
+sim:/tb_FSM/FSM_dut/predecessor_out \
+sim:/tb_FSM/FSM_dut/new_dest_rest \
+sim:/tb_FSM/FSM_dut/button_input \
+sim:/tb_FSM/FSM_dut/vga_disp \
+sim:/tb_FSM/FSM_dut/vga_write \
+sim:/tb_FSM/FSM_dut/vga_clr \
+sim:/tb_FSM/FSM_dut/global_clear \
+sim:/tb_FSM/FSM_dut/global_en \
+sim:/tb_FSM/FSM_dut/select_input_predecessor \
+sim:/tb_FSM/FSM_dut/source_addr \
+sim:/tb_FSM/FSM_dut/dest_addr \
+sim:/tb_FSM/FSM_dut/predecessor_addr
+run 4 us
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: tb_FSM.FSM_dut.pll_inst.altpll_component.cycloneiii_pll.pll3
+# End time: 22:10:31 on Apr 18,2021, Elapsed time: 0:08:09
+# Errors: 0, Warnings: 0

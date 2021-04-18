@@ -1,0 +1,497 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/simulation/modelsim
+vbitonic_sort
+Z1 !s110 1618763539
+!i10b 1
+!s100 >l?;KgebI=NJ>I3=LCSlP3
+IllCkOKzm1K>AITT[hc<KD1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1617629464
+Z4 8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v
+Z5 FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v
+L0 19
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1618763539.000000
+Z8 !s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing}
+Z12 tCvgOpt 0
+vcomputation_block
+Z13 !s110 1618763541
+!i10b 1
+!s100 0b621bd7]WfF4_goo21d[2
+IU:i7@VXZ4j6<gT6<dD3;F1
+R2
+R0
+R3
+Z14 8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v
+Z15 FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v
+L0 2
+R6
+r1
+!s85 0
+31
+Z16 !s108 1618763541.000000
+Z17 !s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v|
+!i113 1
+R10
+R11
+R12
+vcompute
+R13
+!i10b 1
+!s100 Zf4TXXcj=;Zn<_]T[7Sme1
+I>KdUCJiclh_7gbI=N[9FX0
+R2
+R0
+R3
+R14
+R15
+L0 14
+R6
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 1
+R10
+R11
+R12
+vdisplay_unit
+Z19 !s110 1618763542
+!i10b 1
+!s100 BhMUHc03Z>GKj^`>XfQ420
+ITiG=0h2fmio<4>cKWRAoQ1
+R2
+R0
+Z20 w1618258290
+Z21 8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v
+Z22 FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v
+L0 42
+R6
+r1
+!s85 0
+31
+Z23 !s108 1618763542.000000
+Z24 !s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v|
+Z25 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v|
+!i113 1
+R10
+R11
+R12
+vearly_stop
+R13
+!i10b 1
+!s100 ELKa_]?o6PNa=VD]eI73J2
+IoXSVO6oJB8YO6RAfdE@z`1
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v
+L0 4
+R6
+r1
+!s85 0
+31
+R16
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v|
+!i113 1
+R10
+R11
+R12
+vencoder
+R19
+!i10b 1
+!s100 V=U]RDOc`ThZ`d6eeJ]7d3
+I0<a<SV?SHlnBD0jo51:A71
+R2
+R0
+R20
+R21
+R22
+L0 80
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+R11
+R12
+vforwardblock
+Z26 !s110 1618763540
+!i10b 1
+!s100 3gdb]hMI2hDGJA[W0^g]G0
+I1je`3[3?c35gF7Y1`VQCa1
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z27 !s108 1618763540.000000
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v|
+!i113 1
+R10
+R11
+R12
+vFSM
+R13
+!i10b 1
+!s100 70ZUYSaLPH4dZ0]=`^h1l3
+IFz79jmKgEeXkGJLB1[Y2^0
+R2
+R0
+w1618672056
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v
+L0 1
+R6
+r1
+!s85 0
+31
+R16
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v|
+!i113 1
+R10
+R11
+R12
+n@f@s@m
+vmodule_display1
+R19
+!i10b 1
+!s100 G1nG97^zY<R:4=O_355XS0
+IigU649g89DM;3S]A89BmU2
+R2
+R0
+R20
+R21
+R22
+L0 6
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+R11
+R12
+vmux_5_bit_2_input
+R26
+!i10b 1
+!s100 8H4cidDOg6`Kb0mZJN6n80
+IPFB0R7j3@=bkQT3k>Dh@60
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v
+L0 1
+R6
+r1
+!s85 0
+31
+R27
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v|
+!i113 1
+R10
+R11
+R12
+vpipelined_bellman_ford
+R26
+!i10b 1
+!s100 5TVNN65j]`eo47h=FYgF;3
+ImD8eMT[SjDIiQB`o38aXa0
+R2
+R0
+w1617817567
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v
+L0 4
+R6
+r1
+!s85 0
+31
+R27
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v|
+!i113 1
+R10
+R11
+R12
+vpll
+!s110 1618763538
+!i10b 1
+!s100 RQ`]D6YaFK^TF5Z=mAJ;61
+IE4lg7WK`lDaVHMXDKRWok1
+R2
+R0
+w1618650806
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v
+L0 39
+R6
+r1
+!s85 0
+31
+!s108 1618763538.000000
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v|
+!i113 1
+R10
+R11
+R12
+vpll_altpll
+R13
+!i10b 1
+!s100 1XE:>YZjS^QX25CT0bhV^0
+I_EUG4LLGY[@2ocYeP?lPl3
+R2
+R0
+w1618757924
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v
+L0 29
+R6
+r1
+!s85 0
+31
+R16
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work {+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db}
+R12
+vprogram_counter
+R26
+!i10b 1
+!s100 ?QZzg3^hbd6HVabdZW9`41
+ITjYa]DY9bRW@I>OBEbCl<3
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v
+L0 2
+R6
+r1
+!s85 0
+31
+R27
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v|
+!i113 1
+R10
+R11
+R12
+vregFile
+R26
+!i10b 1
+!s100 k139dM^j3kg=M:bzCgB1o1
+I:12JnDfTzP@[=zS4FnL;l1
+R2
+R0
+w1618580866
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v|
+!i113 1
+R10
+R11
+R12
+nreg@file
+vregister
+R1
+!i10b 1
+!s100 b5SDj1aKVKk8GNMWHX?fR2
+IOcABl>kDIVnj?k9KKR>9]1
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v|
+!i113 1
+R10
+R11
+R12
+vrom_lut
+R19
+!i10b 1
+!s100 X?c4UgR44UNdI]8AM@4Ei0
+IW:10IUeTInT6Ze9Y8`<=I1
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v
+L0 9
+R6
+r1
+!s85 0
+31
+R23
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v|
+!i113 1
+R10
+R11
+R12
+vsorting_block
+R1
+!i10b 1
+!s100 5O:^`1YNz9z@<BNc`jVb[0
+Iac>XWQ_gdQK<;Vn`Azo550
+R2
+R0
+R3
+R4
+R5
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vstage1
+R1
+!i10b 1
+!s100 ][3n=WlXJjLKD_Fg80Oo82
+IKZ0VM0<zf`8JoS8I2@^?T1
+R2
+R0
+R3
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v|
+!i113 1
+R10
+R11
+R12
+vtb_compute
+R13
+!i10b 1
+!s100 PM99EQIXB2dbjj79D6hR71
+I[e>IR]H=aXfA<i^n_NmGF2
+R2
+R0
+R3
+R14
+R15
+L0 59
+R6
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 1
+R10
+R11
+R12
+vtb_FSM
+R19
+!i10b 1
+!s100 UWegOEJVLCc1GBZ2bnHI@3
+Idc_@T9]IglLmY3fS>YTD;1
+R2
+R0
+w1618763508
+8G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v
+FG:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v
+L0 2
+R6
+r1
+!s85 0
+31
+R23
+!s107 G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing|G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/tb_FSM.v|
+!i113 1
+R10
+R11
+R12
+ntb_@f@s@m
+vvga_controller
+R19
+!i10b 1
+!s100 ZaX?^2ho<SXb8j?CDc8I^0
+I3Gn4nbDSoC7i6eLSi`GJi0
+R2
+R0
+R20
+R21
+R22
+L0 320
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+R11
+R12
