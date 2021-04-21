@@ -7,11 +7,10 @@ The graph is displayed on a VGA Monitor as shown in Figure below, The user can e
 
 ![Alt text](https://github.com/nikhil879/EE705-Bellman-Ford/blob/master/Graphs/graph_vga.jpeg?raw=true "Dataflow of FSM")
 
-### The flow of execution is shown in the FSM below. 
+### The flow of execution of the FSM is shown below. 
 
 ![Alt text](https://github.com/nikhil879/EE705-Bellman-Ford/blob/master/FSM/FSM.jpeg?raw=true "Dataflow of FSM")
 
-### Once the source and destination are entered, the shortest path will be displayed on the VGA
 
 ## References
 <a id="1">[1]</a> 
