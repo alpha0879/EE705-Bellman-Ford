@@ -12,6 +12,7 @@ The implementation is based on the paper cited in [1].
 
 ![Alt text](https://github.com/nikhil879/EE705-Bellman-Ford/blob/master/FSM/FSM.jpeg?raw=true "Dataflow of FSM")
 
+### Once the source and destination are entered, the shortest path will be displayed on the VGA
 
 ## References
 <a id="1">[1]</a> 
