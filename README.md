@@ -1,5 +1,6 @@
  # EE705-Bellman-Ford
 
+# the images are not final, just using the images for documentation purpose - we can change it later
 
 The project implements Bellman Ford Algorithm using a 5 stage pipeline with data parallelism to process multiple edges in each clock cycle.
 The implementation is based on the paper cited in [1]. 
