@@ -9,7 +9,7 @@ The graph is displayed on a VGA Monitor as shown in Figure below, The user can e
 
 ### The flow of execution of the FSM is shown below. 
 
-![Alt text](https://github.com/nikhil879/EE705-Bellman-Ford/blob/master/FSM/FSM.jpeg?raw=true "Dataflow of FSM")
+![Alt text](https://github.com/nikhil879/EE705-Bellman-Ford/blob/master/FSM/FSM_Optimised_Quartus_folder/FSM_State_diagram.jpeg?raw=true "Dataflow of FSM")
 
 
 ## References
