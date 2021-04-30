@@ -1,15 +1,15 @@
 module FSM(CLOCK_50, KEY, SW, LEDR, LEDG, hsync, vsync, red , green, blue);
 	input CLOCK_50;
-    input KEY;		 // Reset button
-	input [10:0]SW;  // SW[10:6] = Destination address, SW[4:0] = Source address, SW[5] = State change switch
-	output LEDR;	 // Glows when SW[5] is on when FSM starts upon resetting, and remains on in state INIT and COMPUTE and turns off when moved to DEST_INP state
-	output LEDG;	 // LEDG turns on to input destination address, and turns off at the time when VGA displays updated graph
+    input KEY;
+	input [10:0]SW;
+	output LEDR;
+	output LEDG;
 	output hsync, vsync;
 	output [2:0]red,green;
 	output [1:0] blue;
     
 	localparam 
-		START = 3'd0,  
+		START = 3'd0,
 		INIT = 3'd1,
 		COMPUTE = 3'd2,
 		DEST_INP = 3'd3,
@@ -83,6 +83,7 @@ always@(*) begin
 			RECURSION:begin						
 						    source_addr = button_input[4:0];
 							dest_addr = button_input[10:6];
+							
 							if(predecessor_out!=source_addr)
 								begin								
 								predecessor_addr = predecessor_out;
@@ -92,11 +93,11 @@ always@(*) begin
 								predecessor_addr = source_addr;
 								end
 							
-							if(predecessor_addr == 5'd0) 
+							if(predecessor_out == 5'd0) 
 								begin
 								predecessor_addr = source_addr;
 								end
-						end
+						  end
 			VGA_DISP:begin
 						    source_addr = button_input[4:0];							
 							dest_addr = button_input[10:6];
@@ -150,6 +151,7 @@ end
 							next_state = RECURSION;								
 						end
 			RECURSION:	begin
+							
 							if(predecessor_out!=source_addr)
 								begin								
 								next_state = RECURSION;
@@ -158,12 +160,12 @@ end
 								begin
 								next_state = VGA_DISP; 
 								end
-							
-							if(predecessor_addr == 5'd0) 
+							if(predecessor_out == 5'd0) 
 								begin
 								next_state = VGA_DISP;
 								end
-						end
+								
+						   end
 			VGA_DISP:	begin
 							if((new_dest_rest == 2'b00)||(new_dest_rest ==2'b10))
 								next_state = START;

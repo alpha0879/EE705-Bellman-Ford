@@ -112,7 +112,7 @@ always@(*) begin
 								predecessor_addr = source_addr;
 								end
 							
-							if(predecessor_addr == 5'd0) 
+							if(predecessor_out == 5'd0) 
 								begin
 								predecessor_addr = source_addr;
 								end
@@ -179,7 +179,7 @@ end
 								next_state = VGA_DISP; 
 								end
 							
-							if(predecessor_addr == 5'd0) 
+							if(predecessor_out == 5'd0) 
 								begin
 								next_state = VGA_DISP;
 								end

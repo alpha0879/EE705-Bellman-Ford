@@ -73,7 +73,7 @@ initial begin
 		end
 	end
 	
-	SW[4:0] = 5'd6;//00111
+	SW[4:0] = 5'd9;//00111
 	#25;
 	KEY = 1'b0; #20; KEY = 1'b1;
 	#50;
@@ -81,7 +81,7 @@ initial begin
 	
 	@(LEDG)begin
 		if(LEDG == 1)
-			SW[10:6] = 5'd7;
+			SW[10:6] = 5'd2;
 		end
 	#40;
 	SW[5]=0;
