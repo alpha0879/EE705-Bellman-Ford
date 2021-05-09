@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Apr 18 21:59:00 2021
+Analysis & Synthesis Status : Successful - Mon May 10 02:43:56 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FSM
 Top-level Entity Name : FSM
 Family : Cyclone IV E
-Total logic elements : 7,184
-    Total combinational functions : 7,177
+Total logic elements : 7,182
+    Total combinational functions : 7,175
     Dedicated logic registers : 818
 Total registers : 818
 Total pins : 25

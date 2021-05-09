@@ -42,18 +42,18 @@ SW[7] => Selector3.IN5
 SW[8] => Selector2.IN5
 SW[9] => Selector1.IN5
 SW[10] => Selector0.IN5
-LEDR << LEDR.DB_MAX_OUTPUT_PORT_TYPE
-LEDG << LEDG.DB_MAX_OUTPUT_PORT_TYPE
-hsync << module_display1:vga_module.hsync
-vsync << module_display1:vga_module.vsync
-red[0] << module_display1:vga_module.red
-red[1] << module_display1:vga_module.red
-red[2] << module_display1:vga_module.red
-green[0] << module_display1:vga_module.green
-green[1] << module_display1:vga_module.green
-green[2] << module_display1:vga_module.green
-blue[0] << module_display1:vga_module.blue
-blue[1] << module_display1:vga_module.blue
+LEDR <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDG <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+hsync <= module_display1:vga_module.hsync
+vsync <= module_display1:vga_module.vsync
+red[0] <= module_display1:vga_module.red
+red[1] <= module_display1:vga_module.red
+red[2] <= module_display1:vga_module.red
+green[0] <= module_display1:vga_module.green
+green[1] <= module_display1:vga_module.green
+green[2] <= module_display1:vga_module.green
+blue[0] <= module_display1:vga_module.blue
+blue[1] <= module_display1:vga_module.blue
 
 
 |FSM|pll:pll_inst

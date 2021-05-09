@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Sun Apr 18 21:59:01 2021
+Mon May 10 02:43:57 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -59,13 +59,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 18 21:59:00 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 10 02:43:56 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FSM                                         ;
 ; Top-level Entity Name              ; FSM                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 7,184                                       ;
-;     Total combinational functions  ; 7,177                                       ;
+; Total logic elements               ; 7,182                                       ;
+;     Total combinational functions  ; 7,175                                       ;
 ;     Dedicated logic registers      ; 818                                         ;
 ; Total registers                    ; 818                                         ;
 ; Total pins                         ; 25                                          ;
@@ -179,34 +179,34 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; pll.v                            ; yes             ; User Wizard-Generated File             ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v                    ;         ;
-; stage1.v                         ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v                 ;         ;
-; sorting_block.v                  ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v          ;         ;
-; rom_lut.v                        ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v                ;         ;
-; register.v                       ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v               ;         ;
-; regFile.v                        ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v                ;         ;
-; program_counter.v                ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v        ;         ;
-; pipelined_bellman_ford.v         ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v ;         ;
-; mux_5_bit_2_input.v              ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v      ;         ;
-; module_display1.v                ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v        ;         ;
-; forwardblock.v                   ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v           ;         ;
-; early_stop.v                     ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v             ;         ;
-; computation_block.v              ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v      ;         ;
-; graph_1d.mif                     ; yes             ; Auto-Found Memory Initialization File  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/graph_1d.mif             ;         ;
-; rom_input.mif                    ; yes             ; Auto-Found Memory Initialization File  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_input.mif            ;         ;
-; fsm.v                            ; yes             ; Auto-Found Verilog HDL File            ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v                    ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                          ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                      ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                     ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                   ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                   ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction            ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v          ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                                                  ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; pll.v                            ; yes             ; User Wizard-Generated File             ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pll.v                    ;         ;
+; stage1.v                         ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/stage1.v                 ;         ;
+; sorting_block.v                  ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v          ;         ;
+; rom_lut.v                        ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/rom_lut.v                ;         ;
+; register.v                       ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/register.v               ;         ;
+; regFile.v                        ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/regFile.v                ;         ;
+; program_counter.v                ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/program_counter.v        ;         ;
+; pipelined_bellman_ford.v         ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v ;         ;
+; mux_5_bit_2_input.v              ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/mux_5_bit_2_input.v      ;         ;
+; module_display1.v                ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v        ;         ;
+; forwardblock.v                   ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/forwardblock.v           ;         ;
+; early_stop.v                     ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/early_stop.v             ;         ;
+; computation_block.v              ; yes             ; User Verilog HDL File                  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/computation_block.v      ;         ;
+; graph_1d.mif                     ; yes             ; Auto-Found Memory Initialization File  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/graph_1d.mif             ;         ;
+; rom_input.mif                    ; yes             ; Auto-Found Memory Initialization File  ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/rom_input.mif            ;         ;
+; fsm.v                            ; yes             ; Auto-Found Verilog HDL File            ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/fsm.v                    ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                                                             ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                         ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                                                                        ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                                                      ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                                                      ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction            ; G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/db/pll_altpll.v          ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -214,16 +214,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------+
 ; Resource                                    ; Usage                                             ;
 +---------------------------------------------+---------------------------------------------------+
-; Estimated Total logic elements              ; 7,184                                             ;
+; Estimated Total logic elements              ; 7,182                                             ;
 ;                                             ;                                                   ;
-; Total combinational functions               ; 7177                                              ;
+; Total combinational functions               ; 7175                                              ;
 ; Logic element usage by number of LUT inputs ;                                                   ;
-;     -- 4 input functions                    ; 5772                                              ;
-;     -- 3 input functions                    ; 1015                                              ;
-;     -- <=2 input functions                  ; 390                                               ;
+;     -- 4 input functions                    ; 5780                                              ;
+;     -- 3 input functions                    ; 1012                                              ;
+;     -- <=2 input functions                  ; 383                                               ;
 ;                                             ;                                                   ;
 ; Logic elements by mode                      ;                                                   ;
-;     -- normal mode                          ; 6983                                              ;
+;     -- normal mode                          ; 6981                                              ;
 ;     -- arithmetic mode                      ; 194                                               ;
 ;                                             ;                                                   ;
 ; Total registers                             ; 818                                               ;
@@ -239,8 +239,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                   ;
 ; Maximum fan-out node                        ; module_display1:vga_module|vga_controller:V1|k[1] ;
 ; Maximum fan-out                             ; 1119                                              ;
-; Total fan-out                               ; 29959                                             ;
-; Average fan-out                             ; 3.72                                              ;
+; Total fan-out                               ; 29968                                             ;
+; Average fan-out                             ; 3.73                                              ;
 +---------------------------------------------+---------------------------------------------------+
 
 
@@ -249,7 +249,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name            ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+------------------------+--------------+
-; |FSM                                    ; 7177 (38)           ; 818 (7)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |FSM                                                                                 ; FSM                    ; work         ;
+; |FSM                                    ; 7175 (36)           ; 818 (7)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |FSM                                                                                 ; FSM                    ; work         ;
 ;    |module_display1:vga_module|         ; 3547 (2896)         ; 70 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|module_display1:vga_module                                                      ; module_display1        ; work         ;
 ;       |display_unit:D1|                 ; 64 (64)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|module_display1:vga_module|display_unit:D1                                      ; display_unit           ; work         ;
 ;       |encoder:E1|                      ; 504 (504)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|module_display1:vga_module|encoder:E1                                           ; encoder                ; work         ;
@@ -261,24 +261,24 @@ refer to the applicable agreement for further details.
 ;          |compute:comp2|                ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|computation_block:stg4_compute|compute:comp2 ; compute                ; work         ;
 ;          |compute:comp3|                ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|computation_block:stg4_compute|compute:comp3 ; compute                ; work         ;
 ;       |early_stop:early_stop_logic|     ; 21 (21)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|early_stop:early_stop_logic                  ; early_stop             ; work         ;
-;       |forwardblock:frwd_comp_stg|      ; 302 (302)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg                   ; forwardblock           ; work         ;
+;       |forwardblock:frwd_comp_stg|      ; 298 (298)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg                   ; forwardblock           ; work         ;
 ;       |forwardblock:frwd_mem_read_stg|  ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_mem_read_stg               ; forwardblock           ; work         ;
-;       |mux_5_bit_2_input:stg1_mux|      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|mux_5_bit_2_input:stg1_mux                   ; mux_5_bit_2_input      ; work         ;
+;       |mux_5_bit_2_input:stg1_mux|      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|mux_5_bit_2_input:stg1_mux                   ; mux_5_bit_2_input      ; work         ;
 ;       |regFile:register_output|         ; 1333 (1333)         ; 384 (384)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output                      ; regFile                ; work         ;
 ;       |register:pipeline_stg1|          ; 385 (385)           ; 73 (73)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1                       ; register               ; work         ;
-;       |register:pipeline_stg2|          ; 108 (108)           ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2                       ; register               ; work         ;
+;       |register:pipeline_stg2|          ; 112 (112)           ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2                       ; register               ; work         ;
 ;       |register:pipeline_stg3|          ; 852 (852)           ; 112 (112)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3                       ; register               ; work         ;
 ;       |register:pipeline_stg4|          ; 68 (68)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg4                       ; register               ; work         ;
 ;       |sorting_block:stage2|            ; 347 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2                         ; sorting_block          ; work         ;
 ;          |bitonic_sort:C1|              ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C1         ; bitonic_sort           ; work         ;
 ;          |bitonic_sort:C2|              ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C2         ; bitonic_sort           ; work         ;
 ;          |bitonic_sort:C3|              ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C3         ; bitonic_sort           ; work         ;
-;          |bitonic_sort:C4|              ; 85 (85)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C4         ; bitonic_sort           ; work         ;
-;          |bitonic_sort:C5|              ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C5         ; bitonic_sort           ; work         ;
+;          |bitonic_sort:C4|              ; 89 (89)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C4         ; bitonic_sort           ; work         ;
+;          |bitonic_sort:C5|              ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C5         ; bitonic_sort           ; work         ;
 ;          |bitonic_sort:C6|              ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C6         ; bitonic_sort           ; work         ;
-;       |stage1:stage1_read|              ; 26 (0)              ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|stage1:stage1_read                           ; stage1                 ; work         ;
+;       |stage1:stage1_read|              ; 25 (0)              ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|stage1:stage1_read                           ; stage1                 ; work         ;
 ;          |program_counter:pc|           ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|stage1:stage1_read|program_counter:pc        ; program_counter        ; work         ;
-;          |rom_lut:mem1|                 ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|stage1:stage1_read|rom_lut:mem1              ; rom_lut                ; work         ;
+;          |rom_lut:mem1|                 ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pipelined_bellman_ford:compute_stg|stage1:stage1_read|rom_lut:mem1              ; rom_lut                ; work         ;
 ;    |pll:pll_inst|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pll:pll_inst                                                                    ; pll                    ; work         ;
 ;       |altpll:altpll_component|         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pll:pll_inst|altpll:altpll_component                                            ; altpll                 ; work         ;
 ;          |pll_altpll:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                  ; pll_altpll             ; work         ;
@@ -438,62 +438,62 @@ Encoding Type:  One-Hot
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg4|out_data2[2]            ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg4|out_data3[2]            ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg4|out_data4[0]            ;
-; 4:1                ; 41 bits   ; 82 LEs        ; 82 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2|out_data4[5]            ;
-; 5:1                ; 40 bits   ; 120 LEs       ; 80 LEs               ; 40 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2|out_data2[15]           ;
+; 4:1                ; 41 bits   ; 82 LEs        ; 82 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2|out_data4[4]            ;
+; 5:1                ; 40 bits   ; 120 LEs       ; 80 LEs               ; 40 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg2|out_data1[7]            ;
 ; 10:1               ; 22 bits   ; 132 LEs       ; 132 LEs              ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data2[17]           ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|predecessor_out[3]                             ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[0][2]           ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|predecessor_out[2]                             ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[0][7]           ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[1][2]           ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[2][8]           ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[3][3]           ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[4][7]           ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[5][10]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[6][6]           ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[7][5]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[2][2]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[3][2]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[4][9]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[5][2]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[6][2]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[7][3]           ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[8][10]          ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[9][2]           ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[10][3]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[11][3]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[12][3]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[13][6]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[11][6]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[12][6]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[13][5]          ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[14][7]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[15][7]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[16][10]         ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[17][7]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[18][7]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[19][0]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[15][5]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[16][4]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[17][0]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[18][3]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[19][3]          ;
 ; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[20][2]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[21][2]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[22][2]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[23][3]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[24][1]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[25][1]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[26][3]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[27][4]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[28][9]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[29][0]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[30][6]          ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[31][9]          ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data4[7]            ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data3[12]           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[21][1]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[22][4]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[23][9]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[24][3]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[25][7]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[26][9]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[27][7]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[28][7]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[29][7]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[30][2]          ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|regFile:register_output|regMem[31][2]          ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data4[8]            ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data3[7]            ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data2[10]           ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data1[9]            ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data3[6]            ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data4[4]            ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data2[4]            ;
-; 34:1               ; 7 bits    ; 154 LEs       ; 154 LEs              ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data1[6]            ;
-; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data4[0]            ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data1[10]           ;
+; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data3[4]            ;
+; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data4[2]            ;
+; 18:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data2[6]            ;
+; 34:1               ; 7 bits    ; 154 LEs       ; 154 LEs              ; 0 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg1|out_data1[2]            ;
+; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data4[1]            ;
 ; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data3[6]            ;
-; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data2[6]            ;
-; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data1[6]            ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |FSM|module_display1:vga_module|vga_controller:V1|k[6]                                 ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_4[5]            ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_4[7]            ;
+; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data2[0]            ;
+; 38:1               ; 7 bits    ; 175 LEs       ; 168 LEs              ; 7 LEs                  ; Yes        ; |FSM|pipelined_bellman_ford:compute_stg|register:pipeline_stg3|out_data1[2]            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |FSM|module_display1:vga_module|vga_controller:V1|k[3]                                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_4[0]            ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_4[10]           ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_3[1]            ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_3[10]           ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_2[6]            ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_2[8]            ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_1[1]            ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_3[12]           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_2[0]            ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_2[13]           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_1[6]            ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FSM|pipelined_bellman_ford:compute_stg|forwardblock:frwd_comp_stg|out_1[7]            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
 
@@ -986,20 +986,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 2                           ;
 ;     SLD               ; 32                          ;
 ;     plain             ; 58                          ;
-; cycloneiii_lcell_comb ; 7179                        ;
+; cycloneiii_lcell_comb ; 7177                        ;
 ;     arith             ; 194                         ;
 ;         2 data inputs ; 86                          ;
 ;         3 data inputs ; 108                         ;
-;     normal            ; 6985                        ;
+;     normal            ; 6983                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 29                          ;
-;         2 data inputs ; 276                         ;
-;         3 data inputs ; 907                         ;
-;         4 data inputs ; 5772                        ;
+;         2 data inputs ; 269                         ;
+;         3 data inputs ; 904                         ;
+;         4 data inputs ; 5780                        ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.60                       ;
-; Average LUT depth     ; 9.16                        ;
+; Max LUT depth         ; 17.10                       ;
+; Average LUT depth     ; 9.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1008,7 +1008,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:09     ;
+; Top            ; 00:01:08     ;
 +----------------+--------------+
 
 
@@ -1018,49 +1018,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 18 21:57:15 2021
+    Info: Processing started: Mon May 10 02:42:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v Line: 39
+    Info (12023): Found entity 1: pll File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pll.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file stage1.v
-    Info (12023): Found entity 1: stage1 File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v Line: 1
+    Info (12023): Found entity 1: stage1 File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/stage1.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file sorting_block.v
-    Info (12023): Found entity 1: sorting_block File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v Line: 2
-    Info (12023): Found entity 2: bitonic_sort File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v Line: 19
+    Info (12023): Found entity 1: sorting_block File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v Line: 2
+    Info (12023): Found entity 2: bitonic_sort File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file rom_lut.v
-    Info (12023): Found entity 1: rom_lut File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v Line: 9
+    Info (12023): Found entity 1: rom_lut File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/rom_lut.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/register.v Line: 1
+    Info (12023): Found entity 1: register File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regFile File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/regFile.v Line: 6
+    Info (12023): Found entity 1: regFile File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/regFile.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
-    Info (12023): Found entity 1: program_counter File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/program_counter.v Line: 2
+    Info (12023): Found entity 1: program_counter File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/program_counter.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file pipelined_bellman_ford.v
-    Info (12023): Found entity 1: pipelined_bellman_ford File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 4
+    Info (12023): Found entity 1: pipelined_bellman_ford File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file mux_5_bit_2_input.v
-    Info (12023): Found entity 1: mux_5_bit_2_input File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/mux_5_bit_2_input.v Line: 1
+    Info (12023): Found entity 1: mux_5_bit_2_input File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/mux_5_bit_2_input.v Line: 1
 Info (12021): Found 4 design units, including 4 entities, in source file module_display1.v
-    Info (12023): Found entity 1: module_display1 File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 6
-    Info (12023): Found entity 2: display_unit File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 42
-    Info (12023): Found entity 3: encoder File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 80
-    Info (12023): Found entity 4: vga_controller File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 320
+    Info (12023): Found entity 1: module_display1 File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 6
+    Info (12023): Found entity 2: display_unit File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 42
+    Info (12023): Found entity 3: encoder File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 80
+    Info (12023): Found entity 4: vga_controller File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 320
 Info (12021): Found 1 design units, including 1 entities, in source file forwardblock.v
-    Info (12023): Found entity 1: forwardblock File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/forwardblock.v Line: 1
+    Info (12023): Found entity 1: forwardblock File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/forwardblock.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file early_stop.v
-    Info (12023): Found entity 1: early_stop File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/early_stop.v Line: 4
+    Info (12023): Found entity 1: early_stop File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/early_stop.v Line: 4
 Info (12021): Found 3 design units, including 3 entities, in source file computation_block.v
-    Info (12023): Found entity 1: computation_block File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v Line: 2
-    Info (12023): Found entity 2: compute File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v Line: 14
-    Info (12023): Found entity 3: tb_compute File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v Line: 59
+    Info (12023): Found entity 1: computation_block File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/computation_block.v Line: 2
+    Info (12023): Found entity 2: compute File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/computation_block.v Line: 14
+    Info (12023): Found entity 3: tb_compute File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/computation_block.v Line: 59
 Warning (12125): Using design file fsm.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: FSM File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v Line: 1
+    Info (12023): Found entity 1: FSM File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/fsm.v Line: 1
 Info (12127): Elaborating entity "FSM" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v Line: 33
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v Line: 90
-Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v Line: 90
-Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pll.v Line: 90
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/fsm.v Line: 33
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pll.v Line: 90
+Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pll.v Line: 90
+Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pll.v Line: 90
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1116,58 +1116,58 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/pll_altpll.v Line: 29
+    Info (12023): Found entity 1: pll_altpll File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "pipelined_bellman_ford" for hierarchy "pipelined_bellman_ford:compute_stg" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v Line: 41
-Info (12128): Elaborating entity "stage1" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 50
-Info (12128): Elaborating entity "program_counter" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read|program_counter:pc" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v Line: 24
-Info (12128): Elaborating entity "rom_lut" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read|rom_lut:mem1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/stage1.v Line: 25
-Warning (10230): Verilog HDL assignment warning at rom_lut.v(40): truncated value with size 32 to match size of target (1) File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/rom_lut.v Line: 40
-Info (12128): Elaborating entity "mux_5_bit_2_input" for hierarchy "pipelined_bellman_ford:compute_stg|mux_5_bit_2_input:stg1_mux" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 52
-Info (12128): Elaborating entity "regFile" for hierarchy "pipelined_bellman_ford:compute_stg|regFile:register_output" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 62
-Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 75
-Info (12128): Elaborating entity "sorting_block" for hierarchy "pipelined_bellman_ford:compute_stg|sorting_block:stage2" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 82
-Info (12128): Elaborating entity "bitonic_sort" for hierarchy "pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at sorting_block.v(29): inferring latch(es) for variable "W_A", which holds its previous value in one or more paths through the always construct File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at sorting_block.v(29): inferring latch(es) for variable "W_B", which holds its previous value in one or more paths through the always construct File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/sorting_block.v Line: 29
-Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg2" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 90
-Info (12128): Elaborating entity "forwardblock" for hierarchy "pipelined_bellman_ford:compute_stg|forwardblock:frwd_mem_read_stg" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 111
-Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg3" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 120
-Info (12128): Elaborating entity "computation_block" for hierarchy "pipelined_bellman_ford:compute_stg|computation_block:stg4_compute" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 134
-Info (12128): Elaborating entity "compute" for hierarchy "pipelined_bellman_ford:compute_stg|computation_block:stg4_compute|compute:comp0" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/computation_block.v Line: 6
-Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg4" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 143
-Info (12128): Elaborating entity "early_stop" for hierarchy "pipelined_bellman_ford:compute_stg|early_stop:early_stop_logic" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/pipelined_bellman_ford.v Line: 169
-Info (12128): Elaborating entity "module_display1" for hierarchy "module_display1:vga_module" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/fsm.v Line: 44
-Warning (10030): Net "graph.data_a[0]" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 16
-Warning (10030): Net "graph.waddr_a" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 16
-Warning (10030): Net "graph.we_a" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 16
-Info (12128): Elaborating entity "display_unit" for hierarchy "module_display1:vga_module|display_unit:D1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 25
-Info (12128): Elaborating entity "vga_controller" for hierarchy "module_display1:vga_module|vga_controller:V1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 27
-Warning (10230): Verilog HDL assignment warning at module_display1.v(351): truncated value with size 32 to match size of target (16) File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 351
-Info (12128): Elaborating entity "encoder" for hierarchy "module_display1:vga_module|encoder:E1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 28
+Info (12128): Elaborating entity "pipelined_bellman_ford" for hierarchy "pipelined_bellman_ford:compute_stg" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/fsm.v Line: 41
+Info (12128): Elaborating entity "stage1" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 50
+Info (12128): Elaborating entity "program_counter" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read|program_counter:pc" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/stage1.v Line: 24
+Info (12128): Elaborating entity "rom_lut" for hierarchy "pipelined_bellman_ford:compute_stg|stage1:stage1_read|rom_lut:mem1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/stage1.v Line: 25
+Warning (10230): Verilog HDL assignment warning at rom_lut.v(40): truncated value with size 32 to match size of target (1) File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/rom_lut.v Line: 40
+Info (12128): Elaborating entity "mux_5_bit_2_input" for hierarchy "pipelined_bellman_ford:compute_stg|mux_5_bit_2_input:stg1_mux" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 52
+Info (12128): Elaborating entity "regFile" for hierarchy "pipelined_bellman_ford:compute_stg|regFile:register_output" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 62
+Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 75
+Info (12128): Elaborating entity "sorting_block" for hierarchy "pipelined_bellman_ford:compute_stg|sorting_block:stage2" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 82
+Info (12128): Elaborating entity "bitonic_sort" for hierarchy "pipelined_bellman_ford:compute_stg|sorting_block:stage2|bitonic_sort:C1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at sorting_block.v(29): inferring latch(es) for variable "W_A", which holds its previous value in one or more paths through the always construct File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v Line: 29
+Warning (10240): Verilog HDL Always Construct warning at sorting_block.v(29): inferring latch(es) for variable "W_B", which holds its previous value in one or more paths through the always construct File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/sorting_block.v Line: 29
+Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg2" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 90
+Info (12128): Elaborating entity "forwardblock" for hierarchy "pipelined_bellman_ford:compute_stg|forwardblock:frwd_mem_read_stg" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 111
+Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg3" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 120
+Info (12128): Elaborating entity "computation_block" for hierarchy "pipelined_bellman_ford:compute_stg|computation_block:stg4_compute" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 134
+Info (12128): Elaborating entity "compute" for hierarchy "pipelined_bellman_ford:compute_stg|computation_block:stg4_compute|compute:comp0" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/computation_block.v Line: 6
+Info (12128): Elaborating entity "register" for hierarchy "pipelined_bellman_ford:compute_stg|register:pipeline_stg4" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 143
+Info (12128): Elaborating entity "early_stop" for hierarchy "pipelined_bellman_ford:compute_stg|early_stop:early_stop_logic" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/pipelined_bellman_ford.v Line: 169
+Info (12128): Elaborating entity "module_display1" for hierarchy "module_display1:vga_module" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/fsm.v Line: 44
+Warning (10030): Net "graph.data_a[0]" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 16
+Warning (10030): Net "graph.waddr_a" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 16
+Warning (10030): Net "graph.we_a" at module_display1.v(16) has no driver or initial value, using a default initial value '0' File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 16
+Info (12128): Elaborating entity "display_unit" for hierarchy "module_display1:vga_module|display_unit:D1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 25
+Info (12128): Elaborating entity "vga_controller" for hierarchy "module_display1:vga_module|vga_controller:V1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 27
+Warning (10230): Verilog HDL assignment warning at module_display1.v(351): truncated value with size 32 to match size of target (16) File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 351
+Info (12128): Elaborating entity "encoder" for hierarchy "module_display1:vga_module|encoder:E1" File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 28
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "module_display1:vga_module|graph" is uninferred due to asynchronous read logic File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/module_display1.v Line: 16
-Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (62500) in the Memory Initialization File "G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/db/FSM.ram0_module_display1_1e30dc95.hdl.mif" -- setting initial value for remaining addresses to 0
+    Info (276007): RAM logic "module_display1:vga_module|graph" is uninferred due to asynchronous read logic File: G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/module_display1.v Line: 16
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (62500) in the Memory Initialization File "G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/db/FSM.ram0_module_display1_1e30dc95.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/output_files/FSM.map.smsg
+Info (144001): Generated suppressed messages file G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/output_files/FSM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7219 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7217 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 7193 logic cells
+    Info (21061): Implemented 7191 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Sun Apr 18 21:59:01 2021
-    Info: Elapsed time: 00:01:46
-    Info: Total CPU time (on all processors): 00:02:08
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Mon May 10 02:43:57 2021
+    Info: Elapsed time: 00:01:42
+    Info: Total CPU time (on all processors): 00:02:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/Project/FSM/FSM_Timing/output_files/FSM.map.smsg.
+The suppressed messages can be found in G:/G/STUDIES/M.Tech/MOODLE/VLSI Design lab/GIT/EE705-Bellman-Ford/FSM/FSM_Optimised_Quartus_folder/FSM_QuartusFolder_Final_Optimized/output_files/FSM.map.smsg.
 
 
